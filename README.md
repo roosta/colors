@@ -1,4 +1,4 @@
-# color-schemes
+# colors
 
 Repository of anything pertaining to color scheming/composition.
 Palettes are generally in gpick (.gpa) or gimp (.gpl) formats.
