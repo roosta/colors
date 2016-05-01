@@ -1,43 +1,44 @@
 ! -----------------------------------------------------------------------------
 ! File: light-fantastic-dark.xresources
 ! Description: Colorscheme inspried by gruvbox
+! Designed with http://terminal.sexy
 ! Author: roosta <mail@roosta.sh>
 ! Last Modified: 2016-05-01
 ! -----------------------------------------------------------------------------
 
-! hard contrast: *background: #1d2021
-! soft contrast: *background: #32302f
-*background: #232425
-*foreground: #E3E3E3
+! special
+*.foreground:   #deddc7
+*.background:   #282828
+*.cursorColor:  #deddc7
 
-! Black + DarkGrey
-*color0:  #151E23
-*color8:  #7B817C
+! black
+*.color0:       #282828
+*.color8:       #7b817c
 
-! DarkRed + Red
-*color1:  #C83D37
-*color9:  #CF625E
+! red
+*.color1:       #c83d37
+*.color9:       #ff5751
 
-! DarkGreen + Green
-*color2:  #528464
-*color10: #689D6A
+! green
+*.color2:       #739428
+*.color10:      #a3b035
 
-! DarkYellow + Yellow
-*color3:  #CCAF68
-*color11: #E7DB7D
+! yellow
+*.color3:       #e6bd52
+*.color11:      #fbd475
 
-! DarkBlue + Blue
-*color4:  #4D7A8D
-*color12: #B3C6D4
+! blue
+*.color4:       #2583aa
+*.color12:      #549fbe
 
-! DarkMagenta + Magenta
-*color5:  #FC6577
-*color13: #EA738B
+! magenta
+*.color5:       #d2448d
+*.color13:      #fa6e9e
 
-! DarkCyan + Cyan
-*color6:  #009F8F
-*color14: #15B4A4
-! LightGrey + White
+! cyan
+*.color6:       #3d8e7a
+*.color14:      #46afa5
 
-*color7:  #959597
-*color15: #E3E3E3
+! white
+*.color7:       #959597
+*.color15:      #deddc7
