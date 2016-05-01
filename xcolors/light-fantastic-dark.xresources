@@ -1,0 +1,43 @@
+! -----------------------------------------------------------------------------
+! File: light-fantastic-dark.xresources
+! Description: Colorscheme inspried by gruvbox
+! Author: roosta <mail@roosta.sh>
+! Last Modified: 2016-05-01
+! -----------------------------------------------------------------------------
+
+! hard contrast: *background: #1d2021
+! soft contrast: *background: #32302f
+*background: #232425
+*foreground: #E3E3E3
+
+! Black + DarkGrey
+*color0:  #151E23
+*color8:  #7B817C
+
+! DarkRed + Red
+*color1:  #C83D37
+*color9:  #CF625E
+
+! DarkGreen + Green
+*color2:  #528464
+*color10: #689D6A
+
+! DarkYellow + Yellow
+*color3:  #CCAF68
+*color11: #E7DB7D
+
+! DarkBlue + Blue
+*color4:  #4D7A8D
+*color12: #B3C6D4
+
+! DarkMagenta + Magenta
+*color5:  #FC6577
+*color13: #EA738B
+
+! DarkCyan + Cyan
+*color6:  #009F8F
+*color14: #15B4A4
+! LightGrey + White
+
+*color7:  #959597
+*color15: #E3E3E3
