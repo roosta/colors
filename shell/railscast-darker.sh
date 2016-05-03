@@ -2,6 +2,9 @@
 # Base16 Railscasts - Shell color setup script
 # Ryan Bates (http://railscasts.com)
 
+# ~ Modified version of Railscast,
+# ~ where background color is slightly darker. (roosta)
+
 if [ "${TERM%%-*}" = 'linux' ]; then
     # This script doesn't support linux console (use 'vconsole' template instead)
     return 2>/dev/null || exit 0
@@ -30,7 +33,7 @@ color19="3a/40/55" # Base 02
 color20="d4/cf/c9" # Base 04
 color21="f4/f1/ed" # Base 06
 color_foreground="e6/e1/dc" # Base 05
-color_background="15/15/15" # Base 00 
+color_background="15/15/15" # Base 00
 color_cursor="e6/e1/dc" # Base 05
 
 if [ -n "$TMUX" ]; then
