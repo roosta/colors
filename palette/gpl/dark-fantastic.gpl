@@ -1,0 +1,42 @@
+GIMP Palette
+Name: dark-fantastic.gpl
+Columns: 1
+#
+38	38	38	bg0/dark0/fg0
+200	61	55	(124, 1) neutral_red
+28	149	65	(106, 2) neutral_green
+230	189	82	(172, 3) neutral_yellow
+37	131	170	(66, 4) neutral_blue
+210	68	141	(132, 5) neutral_magenta
+61	142	122	(72, 6) neutral_cyan
+255	145	0	(166, -) neutral_orange
+149	149	151	(246, 7) gray/light4/fg4/bg4
+123	129	124	(245, 8) gray/gray_245/gray_246
+255	87	81	(167, 9) bright_red
+112	200	100	(142, 10) bright_green
+251	212	117	(214, 11) bright_yellow
+84	159	190	(109, 12) bright_blue
+250	110	158	(175, 13) bright_magenta
+70	175	165	(108, 14) bright_cyan
+245	158	79	(208, -) bright_orange
+222	221	199	(223, 15) fg1/light1/bg1
+29	29	29	(234, 0) bg0_h/dark0_hard
+39	39	39	(237, -) bg1/dark1/fg1
+59	59	59	(239, -) bg2/dark2/fg2
+77	77	77	(241, -) bg3/dark3/fg3
+97	97	97	(243, -) bg3/dark4/fg4
+46	46	46	(236, -) bg0_s/dark0_soft
+152	149	142	(246, -) fg4/light4/bg4
+167	165	159	(248, -) fg3/light3/bg3
+196	190	177	(250, -) fg2/light2/bg2
+255	255	255	(229, -) fg0/light0/bg0
+159	35	30	(88, -) faded_red
+28	97	65	(100, -) faded_green
+201	153	29	(136, -) faded_yellow
+16	79	106	(24, -) faded_blue
+160	39	101	(96, -) faded_magenta
+46	107	92	(66, -) faded_cyan
+190	96	2	(130, -) faded_orange
+0	0	0	dark4_256
+0	0	0	gray_245
+0	0	0	gray_244

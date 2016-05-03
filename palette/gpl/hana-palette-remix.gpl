@@ -1,0 +1,37 @@
+GIMP Palette
+Name: hana-palette-remix.gpl
+Columns: 1
+#
+21	21	21	Background
+71	52	68	Voodoo ~
+213	87	73	Valencia ~
+143	185	119	Madang ~
+231	168	63	Candlelight ~
+228	216	73	Wattle ~
+156	147	106	Clay creek ~
+168	51	77	Hibiscus ~
+201	204	84	Celery ~
+185	80	89	Shiraz ~
+90	114	96	Mineral green ~
+112	146	137	Cascade ~
+141	166	145	Envy ~
+194	84	49	Tangerine ~
+6	95	115	Allports ~
+135	49	78	Disco ~
+174	129	255	Slate blue ~
+43	43	43	base00
+39	41	53	base01
+58	64	85	base02
+90	100	126	base03
+212	207	201	base04
+230	225	220	base05
+244	241	237	base06
+249	247	243	base07
+218	73	57	base08
+204	120	51	base09
+255	198	109	base0A
+165	194	97	base0B
+81	159	80	base0C
+109	156	190	base0D
+182	179	235	base0E
+188	148	88	base0F
