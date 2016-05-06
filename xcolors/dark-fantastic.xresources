@@ -8,11 +8,11 @@
 
 ! special
 *.foreground:   #deddc7
-*.background:   #262626
+*.background:   #1e2226
 *.cursorColor:  #deddc7
 
 ! black
-*.color0:       #262626
+*.color0:       #1e2226
 *.color8:       #7b817c
 
 ! red
@@ -20,7 +20,7 @@
 *.color9:       #ff5751
 
 ! green
-*.color2:       #418857
+*.color2:       #438841
 *.color10:      #70c864
 
 ! yellow
@@ -36,7 +36,7 @@
 *.color13:      #fa6e9e
 
 ! cyan
-*.color6:       #23837E
+*.color6:       #23837e
 *.color14:      #46afa5
 
 ! white
