@@ -1,0 +1,42 @@
+! -----------------------------------------------------------------------------
+! File: sourcery-urxvt256.xresources
+! Description: Colorscheme to inspire wizardry
+! Author: roosta <mail@roosta.sh>
+! Source: https://github.com/roosta/colors
+! Last Modified: 2016-05-29
+! -----------------------------------------------------------------------------
+URxvt.color24:  #354AAE
+URxvt.color66:  #0F6F6A
+URxvt.color88:  #B1221C
+URxvt.color96:  #B32357
+URxvt.color100: #495F18
+URxvt.color108: #55E0D8
+URxvt.color109: #457EFF
+URxvt.color130: #B23F08
+URxvt.color136: #C17209
+URxvt.color142: #98BC37
+URxvt.color167: #FC503C
+URxvt.color175: #E35682
+URxvt.color208: #F2550B
+URxvt.color214: #FF9D2C
+URxvt.color223: #FCE8C3
+
+! unchanged
+URxvt.color228: #f2e5bc
+URxvt.color229: #FBF1C7
+URxvt.color230: #f9f5d7
+URxvt.color234: #1d2021
+
+URxvt.color235: #1C1B19
+
+! unchanged
+URxvt.color236: #32302f
+URxvt.color237: #3c3836
+URxvt.color239: #504945
+URxvt.color241: #665c54
+URxvt.color243: #7c6f64
+URxvt.color244: #928374
+URxvt.color245: #928374
+URxvt.color246: #a89984
+URxvt.color248: #bdae93
+URxvt.color250: #d5c4a1
