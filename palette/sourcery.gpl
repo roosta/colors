@@ -1,0 +1,22 @@
+GIMP Palette
+Name: sourcery.gpl
+Columns: 1
+#
+35	34	37	BG
+252	232	195	FG
+35	34	37	color0 - Black
+80	78	82	color8 - DarkGrey
+200	61	55	color1 - DarkRed
+255	87	81	color9 - Red
+80	141	83	color2 - DarkGreen
+116	152	118	color10 - Green
+236	173	88	color3 - DarkYellow
+227	187	132	color11 - Yellow
+37	131	170	color4 - DarkBlue
+84	159	190	color12 - Blue
+183	80	133	color5 - DarkMagenta
+250	139	177	color13 - Magenta
+35	131	126	color6 - DarkCyan
+113	176	169	color14 - Cyan
+146	138	127	color7 - LightGrey
+252	232	195	color15 - White
