@@ -5,7 +5,7 @@
 ! Source: https://github.com/roosta/colors
 ! Last Modified: 2016-05-29
 ! -----------------------------------------------------------------------------
-URxvt.color24:  #354AAE
+URxvt.color24:  #455D84
 URxvt.color66:  #0F6F6A
 URxvt.color88:  #B1221C
 URxvt.color96:  #B32357
