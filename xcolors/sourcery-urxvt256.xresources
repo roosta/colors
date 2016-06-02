@@ -5,33 +5,62 @@
 ! Source: https://github.com/roosta/colors
 ! Last Modified: 2016-05-29
 ! -----------------------------------------------------------------------------
-URxvt.color24:  #455D84
+! faded_blue
+URxvt.color24:  #37517B
+
+! faded_cyan
 URxvt.color66:  #0F6F6A
+
+! faded_red
 URxvt.color88:  #B1221C
+
+! faded_magenta
 URxvt.color96:  #B32357
+
+! faded_green
 URxvt.color100: #495F18
+
+! bright_cyan
 URxvt.color108: #55E0D8
+
+! bright_blue
 URxvt.color109: #457EFF
+
+! bright_magenta
 URxvt.color130: #B23F08
+
+! faded_yellow
 URxvt.color136: #C17209
+
+! bright_green
 URxvt.color142: #98BC37
+
+! bright_red
 URxvt.color167: #FC503C
+
+! bright_magenta
 URxvt.color175: #E35682
+
+! bright_orange
 URxvt.color208: #F2550B
+
+! bright_yellow
 URxvt.color214: #FF9D2C
+
+!  fg1/light1/bg1
 URxvt.color223: #FCE8C3
 
 ! unchanged
 URxvt.color228: #f2e5bc
 URxvt.color229: #FBF1C7
 URxvt.color230: #f9f5d7
-URxvt.color234: #1d2021
+URxvt.color234: #000000
 
 URxvt.color235: #1C1B19
 
 ! unchanged
 URxvt.color236: #32302f
-URxvt.color237: #3c3836
+URxvt.color237: #282828
 URxvt.color239: #504945
 URxvt.color241: #665c54
 URxvt.color243: #7c6f64
