@@ -1,5 +1,5 @@
 GIMP Palette
-Name: sourcery.gpl
+Name: srcery.gpl
 Columns: 1
 #
 255	49	40	(124, 1) neutral_red
@@ -9,15 +9,15 @@ Columns: 1
 224	44	109	(132, 5) neutral_magenta
 22	147	165	(72, 6) neutral_cyan
 255	102	0	(166, -) neutral_orange
-168	153	132	(246, 7) gray/light4/fg4/bg4
-146	131	116	(245, 8) gray/gray_245/gray_246
 124	111	100	(243, 7) gray/gray_243/gray7_light
 146	131	116	(244, 8) gray/gray_244/gray8_light
+146	131	116	(245, 8) gray/gray_245/gray_246
+168	153	132	(246, 7) gray/gray_246/light4/fg4/bg4
 218	73	57	(167, 9) bright_red
 152	188	55	(142, 10) bright_green
 255	198	109	(214, 11) bright_yellow
 109	156	190	(109, 12) bright_blue
-227	86	130	(108, 14) bright_cyan
+227	86	130	(175, 13) bright_magenta
 52	190	218	(108, 14) bright_cyan
 204	120	51	(208, -) bright_orange
 0	0	0	(234, 0) bg0_h/dark0_hard
