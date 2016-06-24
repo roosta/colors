@@ -18,3 +18,8 @@ Columns: 1
 227	86	130	[13] bright_magenta
 52	190	218	[14] bright_cyan
 145	129	117	[15] gray
+255	255	255	------- xterm colors -------
+215	95	0	[166] orange
+255	135	0	[208] bright_orange
+8	8	8	[232] hard_black
+78	78	78	[239] alt_gray
