@@ -9,7 +9,7 @@ Columns: 1
 85	115	163	[4] blue
 224	44	109	[5] magenta
 22	147	165	[6] cyan
-252	232	195	[7] white
+145	129	117	[7] gray
 45	43	40	[8] bright_black
 218	73	57	[9] bright_red
 152	188	55	[10] bright_green
@@ -17,7 +17,7 @@ Columns: 1
 109	156	190	[12] bright_blue
 227	86	130	[13] bright_magenta
 52	190	218	[14] bright_cyan
-145	129	117	[15] gray
+252	232	195	[15] white
 255	255	255	------- xterm colors -------
 215	95	0	[166] orange
 255	135	0	[208] bright_orange
