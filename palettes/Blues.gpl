@@ -1,11 +1,10 @@
 GIMP Palette
-Name: Blues
+Name: Blues #1
+Columns: 0
 #
-# For them rainy days ... by Daniel Egnor
-#
-  0   0   0     #000000
-128 128 128     #808080
-255 255 255     #FFFFFF
+  0   0   0	    #000000
+128 128 128	    #808080
+255 255 255	    #FFFFFF
   0   0   4	#000004
   0   0  12	#00000C
   0   0  16	#000010
