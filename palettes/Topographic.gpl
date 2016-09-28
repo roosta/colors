@@ -1,7 +1,6 @@
 GIMP Palette
-Name: Topographic
-#
-#   "Topographic" color map - M. Davis
+Name: Topographic #1
+Columns: 0
 #
   0   0   0	#000000
 128 128 128	#808080
