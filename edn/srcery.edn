@@ -20,7 +20,6 @@
                   :rgb  [10, 174, 179]
                   :code 6}
  :white          {:hex      "#918175"
-                  :alt-name "grey"
                   :rgb      [145, 129, 117]
                   :code     7 }
  :bright-black   {:hex  "#2D2B28"
@@ -45,6 +44,5 @@
                   :rgb  [83, 253, 233]
                   :code 14}
  :bright-white   {:hex      "#FCE8C3"
-                  :alt-name "white"
                   :rgb      [252, 232, 195]
                   :code     15}}
