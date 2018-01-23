@@ -1,8 +1,8 @@
 {:black          {:hex  "#1C1B19"
                   :rgb  [28,  27,  25]
                   :code 0}
- :red            {:hex  "#FF3128"
-                  :rgb  [255, 49,  40]
+ :red            {:hex  "#EF2F27"
+                  :rgb  [239, 47, 39]
                   :code 1}
  :green          {:hex  "#519F50"
                   :rgb  [81,  159, 80]
@@ -10,8 +10,8 @@
  :yellow         {:hex  "#FBB829"
                   :rgb  [251, 184, 41]
                   :code 3}
- :blue           {:hex  "#5573A3"
-                  :rgb  [85,  115, 163]
+ :blue           {:hex  "#2C78BF"
+                  :rgb  [44, 120, 191]
                   :code 4}
  :magenta        {:hex  "#E02C6D"
                   :rgb  [224, 44,  109]
@@ -20,7 +20,6 @@
                   :rgb  [10, 174, 179]
                   :code 6}
  :white          {:hex      "#918175"
-                  :alt-name "grey"
                   :rgb      [145, 129, 117]
                   :code     7 }
  :bright-black   {:hex  "#2D2B28"
@@ -35,16 +34,15 @@
  :bright-yellow  {:hex  "#FED06E"
                   :rgb  [254, 208, 110]
                   :code 11}
- :bright-blue    {:hex  "#8EB2F7"
-                  :rgb  [142, 178, 247]
+ :bright-blue    {:hex  "#82B4E3"
+                  :rgb  [130, 180, 227]
                   :code 12}
- :bright-magenta {:hex  "#E35682"
-                  :rgb  [227, 86,  130]
+ :bright-magenta {:hex  "#FF5C8F"
+                  :rgb [255, 92, 143]
                   :code 13}
  :bright-cyan    {:hex  "#53FDE9"
                   :rgb  [83, 253, 233]
                   :code 14}
  :bright-white   {:hex      "#FCE8C3"
-                  :alt-name "white"
                   :rgb      [252, 232, 195]
                   :code     15}}
