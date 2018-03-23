@@ -22,8 +22,8 @@ Columns: 1
 215	95	0	[166] orange
 255	135	0	[208] bright_orange
 18	18	18	[233] hard_black
-38	38	38	[235] xgrey1
-48	48	48	[236] xgrey2
+38	38	38	[235] xgray1 / gray15
+48	48	48	[236] xgray2 / gray19
 58	58	58	[237] xgrey3
 68	68	68	[238] xgrey4
 78	78	78	[239] xgrey5
