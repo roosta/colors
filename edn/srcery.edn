@@ -22,20 +22,20 @@
  :white          {:hex      "#918175"
                   :rgb      [145, 129, 117]
                   :code     7 }
- :bright-black   {:hex  "#2D2B28"
-                  :rgb  [45,  43,  40]
+ :bright-black   {:hex  "#2D2C29"
+                  :rgb  [45,  44,  41]
                   :code 8}
  :bright-red     {:hex  "#F75341"
                   :rgb  [247, 83, 65]
                   :code 9}
- :bright-green   {:hex  "#F75341"
-                  :rgb  [247, 83, 65]
+ :bright-green   {:hex  "#98BC37"
+                  :rgb  [152, 188, 55]
                   :code 10}
  :bright-yellow  {:hex  "#FED06E"
                   :rgb  [254, 208, 110]
                   :code 11}
- :bright-blue    {:hex  "#82B4E3"
-                  :rgb  [130, 180, 227]
+ :bright-blue    {:hex  "#68A8E4"
+                  :rgb  [104, 168, 228]
                   :code 12}
  :bright-magenta {:hex  "#FF5C8F"
                   :rgb [255, 92, 143]
