@@ -1,0 +1,36 @@
+GIMP Palette
+Name: srcery-update-tmp.gpl
+Columns: 1
+#
+28	27	25	[0] black
+102	90	81	
+239	47	39	[1] red
+247	83	65	[9] bright_red
+69	171	68	69	171	68
+152	188	55	[10] bright_green
+251	184	41	[3] yellow
+254	208	110	[11] bright_yellow
+8	121	227	8	121	227
+54	158	255	54	158	255
+224	44	109	[5] magenta
+255	92	143	[13] bright_magenta
+0	198	207	
+83	253	233	[14] bright_cyan
+176	162	136	
+252	232	195	[15] bright_white
+255	95	0	[202] orange
+255	135	0	[208] bright_orange
+18	18	18	[233] hard_black
+38	38	38	[235] xgray1 / gray15
+48	48	48	[236] xgray2 / gray19
+58	58	58	[237] xgray3
+68	68	68	[238] xgray4
+78	78	78	[239] xgray5
+88	88	88	[240] xgray6
+98	98	98	[241] xgray7
+108	108	108	[242] xgray8
+118	118	118	[243] xgray9
+128	128	128	[244] xgray10
+138	138	138	[245] xgray11
+148	148	148	[246] xgray12
+145	129	117	[7] white
