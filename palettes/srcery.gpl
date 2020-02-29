@@ -20,6 +20,7 @@ Columns: 1
 252	232	195	[15] bright_white
 255	95	0	[202] orange
 255	135	0	[208] bright_orange
+0	128	128	[30] teal
 18	18	18	[233] hard_black
 38	38	38	[235] xgray1 / gray15
 48	48	48	[236] xgray2 / gray19
