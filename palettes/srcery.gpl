@@ -16,8 +16,7 @@ Columns: 1
 255	92	143	[13] bright_magenta
 10	174	179	[6] cyan
 83	253	233	[14] bright_cyan
-208	191	161	[7] white
-186	166	127	
+186	166	127	[7] white
 252	232	195	[15] bright_white
 255	95	0	[202] orange
 255	135	0	[208] bright_orange
@@ -35,4 +34,3 @@ Columns: 1
 128	128	128	[244] xgray10
 138	138	138	[245] xgray11
 148	148	148	[246] xgray12
-44	42	39	[8] old bright black
