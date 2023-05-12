@@ -1,0 +1,26 @@
+GIMP Palette
+Name: firefox.gpl
+Columns: 1
+#
+251	251	254	Pale grey
+46	52	54	Charcoal
+0	221	255	Neon blue
+255	255	255	light popup
+239	239	242	light button
+223	223	229	light button hover
+207	207	216	light button active
+21	20	26	light text
+66	65	77	dark popup
+251	251	254	dark text
+43	42	51	dark button
+82	82	94	dark button hover
+91	91	102	dark button active
+66	65	77	dark input background
+143	143	157	dark input border
+251	251	254	dark input text
+35	34	43	Dark
+240	240	244	Pale grey
+239	239	242	Pale grey
+208	208	208	Silver
+133	133	134	Medium grey
+66	65	77	Dark
