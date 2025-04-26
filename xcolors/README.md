@@ -1,2 +1,0 @@
-Xresources color themes
-===
