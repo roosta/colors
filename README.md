@@ -18,8 +18,8 @@ programs like [Gimp](https://www.gimp.org/), [Inkscape](https://inkscape.org/),
 ## Disclaimer
 
 I'm not the author of each palette, just some. I've gathered, mixed and matched
-from various sites over the years, and unfortunatly I haven't always tracked the
-orignal author or origin.
+from various sites over the years, and unfortunately I haven't always tracked the
+original author or origin.
 
 ## Licence
 
