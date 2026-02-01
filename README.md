@@ -14,6 +14,7 @@ programs like [Gimp](https://www.gimp.org/), [Inkscape](https://inkscape.org/),
 - [Coolors.co - The super fast color schemes generator](https://coolors.co/)
 - [Color wheel | Color schemes - Adobe Color CC](https://color.adobe.com/create/color-wheel/)
 - [Paletton - The Color Scheme Designer](http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF)
+- [Color Hex - ColorHexa.com](https://www.colorhexa.com/)
 
 ## Disclaimer
 
