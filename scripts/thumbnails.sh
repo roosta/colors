@@ -32,12 +32,15 @@
 # Usage: run from repo root `./scripts/thumbnails.sh`
 set -euo pipefail
 
+cd "$(dirname "$0")/.." || exit 1
+
 PALETTES_DIR="./palettes"
 OUTPUT_DIR="./assets"
 README="./README.md"
 TILE_SIZE="${1:-50}"
 
 mkdir -p "$OUTPUT_DIR"
+rm -f "${OUTPUT_DIR:?}"/*.jpg
 
 palette_names=()
 palette_files=()
