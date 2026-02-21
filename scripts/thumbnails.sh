@@ -24,51 +24,42 @@
 # Drafted Feb 2026 based on LLM suggestion (claude-4.5-sonnet)
 # reviewed and edited by Daniel Berg <mail@roosta.sh>
 
+
 set -euo pipefail
 
-USAGE="Usage: $0 <palette.gpl> [output_dir] [tile_size]"
-PALETTE_FILE="${1:?${USAGE}}"
-OUTPUT_DIR="${2:-./assets}"
-TILE_SIZE="${3:-100}"
-OUTPUT_NAME="$(basename "${PALETTE_FILE%.gpl}")"
-OUTPUT_FILE="${OUTPUT_DIR}/${OUTPUT_NAME}_swatch.jpg"
+PALETTES_DIR="./palettes"
+OUTPUT_DIR="./assets"
+TILE_SIZE="${1:-100}"
 
 mkdir -p "$OUTPUT_DIR"
 
-# Build ImageMagick argument list by parsing the GPL palette file.
-# The -size flag is set once and applies to all subsequent xc: images.
-args=(-size "${TILE_SIZE}x${TILE_SIZE}")
-count=0
+for palette in "${PALETTES_DIR}"/*.gpl; do
+  output="${OUTPUT_DIR}/$(basename "${palette%.gpl}").jpg"
+  args=(-size "${TILE_SIZE}x${TILE_SIZE}")
 
-while IFS= read -r line; do
-  # Skip empty lines
-  [[ -z "$line" ]] && continue
-  # Skip comment lines
-  [[ "$line" =~ ^[[:space:]]*# ]] && continue
-  # Skip GPL header lines
-  [[ "$line" =~ ^GIMP[[:space:]]Palette ]] && continue
-  [[ "$line" =~ ^Name: ]] && continue
-  [[ "$line" =~ ^Columns: ]] && continue
+  while IFS= read -r line; do
+    [[ -z "$line" ]]                         && continue
+    [[ "$line" =~ ^[[:space:]]*# ]]          && continue
+    [[ "$line" =~ ^GIMP[[:space:]]Palette ]] && continue
+    [[ "$line" =~ ^Name: ]]                  && continue
+    [[ "$line" =~ ^Columns: ]]               && continue
 
-    # Parse: r g b [optional color name]
     read -r r g b _name <<< "$line"
 
-    # Validate that r, g, b are integers within the 0-255 sRGB range
     if [[ "$r" =~ ^[0-9]+$ ]] && [[ "$g" =~ ^[0-9]+$ ]] && [[ "$b" =~ ^[0-9]+$ ]] \
       && (( r <= 255 && g <= 255 && b <= 255 )); then
-      args+=("xc:rgb(${r},${g},${b})")
-        (( ++count ))
+    args+=("xc:rgb(${r},${g},${b})")
     fi
-  done < "$PALETTE_FILE"
+  done < "$palette"
 
-  if (( count == 0 )); then
-    echo "Error: no valid colors found in '${PALETTE_FILE}'" >&2
-    exit 1
+  if (( ${#args[@]} <= 2 )); then
+    echo "Warning: no valid colors found in '${palette}', skipping." >&2
+    continue
   fi
 
-  echo "Rendering ${count} color tiles at ${TILE_SIZE}x${TILE_SIZE}px..."
+  echo "Rendering $(basename "$palette") -> ${output}"
+  magick "${args[@]}" +append "$output"
+done
 
-  magick "${args[@]}" +append "$OUTPUT_FILE"
-
-  echo "Saved: ${OUTPUT_FILE}"
+echo "Done."
 
