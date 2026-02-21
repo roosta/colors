@@ -24,19 +24,31 @@
 # Drafted Feb 2026 based on LLM suggestion (claude-4.5-sonnet)
 # reviewed and edited by Daniel Berg <mail@roosta.sh>
 
-
 set -euo pipefail
 
 PALETTES_DIR="./palettes"
 OUTPUT_DIR="./assets"
-TILE_SIZE="${1:-100}"
+README="./README.md"
+TILE_SIZE="${1:-50}"
 
 mkdir -p "$OUTPUT_DIR"
 
-for palette in "${PALETTES_DIR}"/*.gpl; do
-  output="${OUTPUT_DIR}/$(basename "${palette%.gpl}").jpg"
-  args=(-size "${TILE_SIZE}x${TILE_SIZE}")
+palette_names=()
+palette_files=()
 
+for palette in "${PALETTES_DIR}"/*.gpl; do
+  filename="$(basename "$palette")"
+  stem="${filename%.gpl}"
+  output="${OUTPUT_DIR}/${stem}.jpg"
+
+  # Use the Name: field from the palette header, fall back to the filename stem
+  palette_name="$(grep -m1 '^Name:' "$palette" \
+    | sed 's/^Name:[[:space:]]*//' \
+    | sed 's/[[:space:]]*$//')"
+  [[ -z "$palette_name" ]] && palette_name="$stem"
+
+  # Build ImageMagick args by parsing colour entries
+  args=(-size "${TILE_SIZE}x${TILE_SIZE}")
   while IFS= read -r line; do
     [[ -z "$line" ]]                         && continue
     [[ "$line" =~ ^[[:space:]]*# ]]          && continue
@@ -48,7 +60,7 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
 
     if [[ "$r" =~ ^[0-9]+$ ]] && [[ "$g" =~ ^[0-9]+$ ]] && [[ "$b" =~ ^[0-9]+$ ]] \
       && (( r <= 255 && g <= 255 && b <= 255 )); then
-    args+=("xc:rgb(${r},${g},${b})")
+      args+=("xc:rgb(${r},${g},${b})")
     fi
   done < "$palette"
 
@@ -57,9 +69,41 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
     continue
   fi
 
-  echo "Rendering $(basename "$palette") -> ${output}"
+  echo "Rendering ${filename} -> ${output}"
   magick "${args[@]}" +append "$output"
+
+  palette_names+=("$palette_name")
+  palette_files+=("$filename")
 done
 
+# ---------------------------------------------------------------------------
+# Rebuild the ## Palette files section in the README
+# ---------------------------------------------------------------------------
+tmp_section="$(mktemp)"
+
+{
+  printf '## Palette files\n\n'
+  for i in "${!palette_files[@]}"; do
+    name="${palette_names[$i]}"
+    file="${palette_files[$i]}"
+    stem="${file%.gpl}"
+    printf '### [%s](./palettes/%s)\n\n' "$name" "$file"
+    printf '![%s swatch](./assets/%s.jpg)\n\n' "$name" "$stem"
+  done
+} > "$tmp_section"
+
+awk '
+  /^## Palette files/ {
+    in_section = 1
+    while ((getline line < "'"$tmp_section"'") > 0) print line
+    next
+  }
+  in_section && /^## / { in_section = 0 }
+  !in_section { print }
+' "$README" > "${README}.tmp" && mv "${README}.tmp" "$README"
+
+rm -f "$tmp_section"
+
+echo "README.md updated."
 echo "Done."
 
