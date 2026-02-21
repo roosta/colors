@@ -44,7 +44,8 @@ can be read by programs like [Gimp](https://www.gimp.org/),
 - [thezbyg/gpick: Advanced color picker written in C++ using GTK+ toolkit](https://github.com/thezbyg/gpick)
 - [Swatch](https://swatch.gabmus.org/)
 
-## Palette files
+
+## Preview Palettes
 
 ### [1001-stories.gpl](./palettes/1001-stories.gpl)
 

@@ -94,7 +94,7 @@ done
 tmp_section="$(mktemp)"
 
 {
-  printf '## Palette files\n\n'
+  printf '## Preview Palettes\n\n'
   for i in "${!palette_files[@]}"; do
     name="${palette_names[$i]}"
     file="${palette_files[$i]}"
@@ -105,7 +105,7 @@ tmp_section="$(mktemp)"
 } > "$tmp_section"
 
 awk '
-  /^## Palette files/ {
+  /^## Preview Palettes/ {
     in_section = 1
     while ((getline line < "'"$tmp_section"'") > 0) print line
     next
