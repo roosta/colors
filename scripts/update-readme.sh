@@ -3,15 +3,15 @@
 #
 # Copyright (c) 2026 Daniel Berg <mail@roosta.sh>
 #
-# Permission is hereby granted, free of charge, to any person obtaining a copy of
-# this software and associated documentation files (the "Software"), to deal in
-# the Software without restriction, including without limitation the rights to
-# use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-# of the Software, and to permit persons to whom the Software is furnished to do
-# so, subject to the following conditions:
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 #
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -24,13 +24,21 @@
 # Drafted Feb 2026 based on LLM suggestion (claude-4.5-sonnet)
 # reviewed and edited by Daniel Berg <mail@roosta.sh>
 #
-# Generate swatches for palette files in `./palettes` directory
+# -----------------------------------------------------------------------------
+# update-readme.sh - add palette previews to project readme
+# -----------------------------------------------------------------------------
 #
-# It will generate the files in `./assets`, and update the readme under the
-# "Palette files" heading.
+# Generate an image array of 50x50 colored squares for each color in a palette
+# file located in the `./palettes` directory, each a GIMP Palette Format
+# Version 2 (.gpl) file.
 #
-# Supports passing a palette tile size as $1, defaults to
-# ./scripts/update-readme.sh 50x50
+# It will create the images and place them in `./assets`, and update the readme
+# under the "Preview Palettes" heading, adding a new heading for each preview
+# image and a link to the palette file.
+#
+# Supports passing a palette tile size as $1, defaults to 50
+#
+# Usage: ./scripts/update-readme.sh [tile size]
 
 # Strict mode
 set -euo pipefail
@@ -79,7 +87,9 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
     read -r r g b _name <<< "$line"
 
     # Validate rgb values
-    if [[ "$r" =~ ^[0-9]+$ ]] && [[ "$g" =~ ^[0-9]+$ ]] && [[ "$b" =~ ^[0-9]+$ ]] \
+    if [[ "$r" =~ ^[0-9]+$ ]] \
+      && [[ "$g" =~ ^[0-9]+$ ]] \
+      && [[ "$b" =~ ^[0-9]+$ ]] \
       && (( r <= 255 && g <= 255 && b <= 255 )); then
       args+=("xc:rgb(${r},${g},${b})")
     fi
@@ -97,9 +107,9 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
   palette_files+=("$filename")
 done
 
-# ---------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Rebuild the ## Preview Palettes section in the README
-# ---------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 tmp_section="$(mktemp)"
 
 {
