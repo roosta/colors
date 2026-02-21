@@ -40,7 +40,10 @@ README="./README.md"
 TILE_SIZE="${1:-50}"
 
 mkdir -p "$OUTPUT_DIR"
+
+shopt -s nullglob
 rm -f "${OUTPUT_DIR:?}"/*.jpg
+shopt -u nullglob
 
 palette_names=()
 palette_files=()
