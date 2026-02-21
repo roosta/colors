@@ -4,7 +4,7 @@ A collection of predefined color palettes, and web resources to aid in developin
 
 The [palettes](./palettes) directory contain a collection of GIMP palette files (.gpl), and
 can be read by programs like [Gimp](https://www.gimp.org/),
-[Inkscape](https://inkscape.org/), [Gpick](https://www.gpick.org/). See [below](#palette-files) for a preview of each.
+[Inkscape](https://inkscape.org/), [Gpick](https://www.gpick.org/). See [below](#preview-palettes) for a preview of each.
 
 ## Resources
 
