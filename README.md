@@ -50,10 +50,6 @@ can be read by programs like [Gimp](https://www.gimp.org/),
 
 ![1001-stories.gpl swatch](./assets/1001-stories.jpg)
 
-### [9d646e.gpl](./palettes/9d646e.gpl)
-
-![9d646e.gpl swatch](./assets/9d646e.jpg)
-
 ### [adrift-in-dreams.gpl](./palettes/adrift-in-dreams.gpl)
 
 ![adrift-in-dreams.gpl swatch](./assets/adrift-in-dreams.jpg)
