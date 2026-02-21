@@ -24,14 +24,18 @@
 # Drafted Feb 2026 based on LLM suggestion (claude-4.5-sonnet)
 # reviewed and edited by Daniel Berg <mail@roosta.sh>
 #
-# Generate swatches for palette files in `./palette` directory
+# Generate swatches for palette files in `./palettes` directory
 #
 # It will generate the files in `./assets`, and update the readme under the
 # "Palette files" heading.
 #
-# Usage: run from repo root `./scripts/thumbnails.sh`
+# Supports passing a palette tile size as $1, defaults to
+# ./scripts/update-readme.sh 50x50
+
+# Strict mode
 set -euo pipefail
 
+# Ensure we run from project root
 cd "$(dirname "$0")/.." || exit 1
 
 PALETTES_DIR="./palettes"
@@ -41,6 +45,7 @@ TILE_SIZE="${1:-50}"
 
 mkdir -p "$OUTPUT_DIR"
 
+# Clear old preview files
 shopt -s nullglob
 rm -f "${OUTPUT_DIR:?}"/*.jpg
 shopt -u nullglob
@@ -48,6 +53,9 @@ shopt -u nullglob
 palette_names=()
 palette_files=()
 
+# -----------------------------------------------------------------------------
+# Generate asset images by reading palette files, and output to ./assets/*.jpg
+# -----------------------------------------------------------------------------
 for palette in "${PALETTES_DIR}"/*.gpl; do
   filename="$(basename "$palette")"
   stem="${filename%.gpl}"
@@ -70,6 +78,7 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
 
     read -r r g b _name <<< "$line"
 
+    # Validate rgb values
     if [[ "$r" =~ ^[0-9]+$ ]] && [[ "$g" =~ ^[0-9]+$ ]] && [[ "$b" =~ ^[0-9]+$ ]] \
       && (( r <= 255 && g <= 255 && b <= 255 )); then
       args+=("xc:rgb(${r},${g},${b})")
@@ -89,7 +98,7 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
 done
 
 # ---------------------------------------------------------------------------
-# Rebuild the ## Palette files section in the README
+# Rebuild the ## Preview Palettes section in the README
 # ---------------------------------------------------------------------------
 tmp_section="$(mktemp)"
 
