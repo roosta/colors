@@ -23,7 +23,13 @@
 #
 # Drafted Feb 2026 based on LLM suggestion (claude-4.5-sonnet)
 # reviewed and edited by Daniel Berg <mail@roosta.sh>
-
+#
+# Generate swatches for palette files in `./palette` directory
+#
+# It will generate the files in `./assets`, and update the readme under the
+# "Palette files" heading.
+#
+# Usage: run from repo root `./scripts/thumbnails.sh`
 set -euo pipefail
 
 PALETTES_DIR="./palettes"
