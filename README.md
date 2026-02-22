@@ -483,10 +483,6 @@ can be read by programs like [Gimp](https://www.gimp.org/),
 
 ![srcery-next.gpl swatch](./assets/srcery-next.jpg)
 
-### [srcery-test.gpl](./palettes/srcery-test.gpl)
-
-![srcery-test.gpl swatch](./assets/srcery-test.jpg)
-
 ### [SVG](./palettes/svg.gpl)
 
 ![SVG swatch](./assets/svg.jpg)
