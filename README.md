@@ -475,13 +475,13 @@ can be read by programs like [Gimp](https://www.gimp.org/),
 
 ![soff2.gpl swatch](./assets/soff2.jpg)
 
-### [srcery.gpl](./palettes/srcery.gpl)
+### [srcery1.gpl](./palettes/srcery1.gpl)
 
-![srcery.gpl swatch](./assets/srcery.jpg)
+![srcery1.gpl swatch](./assets/srcery1.jpg)
 
-### [srcery-next.gpl](./palettes/srcery-next.gpl)
+### [srcery2.gpl](./palettes/srcery2.gpl)
 
-![srcery-next.gpl swatch](./assets/srcery-next.jpg)
+![srcery2.gpl swatch](./assets/srcery2.jpg)
 
 ### [SVG](./palettes/svg.gpl)
 

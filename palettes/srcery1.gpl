@@ -1,5 +1,5 @@
 GIMP Palette
-Name: srcery.gpl
+Name: srcery1.gpl
 Columns: 1
 #
 28	27	25	[0] black
@@ -34,5 +34,3 @@ Columns: 1
 128	128	128	[244] xgray10
 138	138	138	[245] xgray11
 148	148	148	[246] xgray12
-41	66	41	Very dark green
-79	35	33	Purple brown
