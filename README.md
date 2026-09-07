@@ -383,6 +383,10 @@ can be read by programs like [Gimp](https://www.gimp.org/),
 
 ![Inkscape default swatch](./assets/inkscape.jpg)
 
+### [isla](./palettes/isla.gpl)
+
+![isla swatch](./assets/isla.jpg)
+
 ### [k519.gpl](./palettes/k519.gpl)
 
 ![k519.gpl swatch](./assets/k519.jpg)
@@ -446,6 +450,10 @@ can be read by programs like [Gimp](https://www.gimp.org/),
 ### [pitney-bowes.gpl](./palettes/pitney-bowes.gpl)
 
 ![pitney-bowes.gpl swatch](./assets/pitney-bowes.jpg)
+
+### [pivoteer](./palettes/pivoteer.gpl)
+
+![pivoteer swatch](./assets/pivoteer.jpg)
 
 ### [quadim.gpl](./palettes/quadim.gpl)
 
