@@ -56,7 +56,6 @@ mkdir -p "$OUTPUT_DIR"
 # Clear old preview files
 shopt -s nullglob
 rm -f "${OUTPUT_DIR:?}"/*.jpg
-shopt -u nullglob
 
 palette_names=()
 palette_files=()
@@ -69,10 +68,10 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
   stem="${filename%.gpl}"
   output="${OUTPUT_DIR}/${stem}.jpg"
 
-  # Use the Name: field from the palette header, fall back to the filename stem
+  # Try getting Name: field from the palette header, fall back to the filename
   palette_name="$(grep -m1 '^Name:' "$palette" \
     | sed 's/^Name:[[:space:]]*//' \
-    | sed 's/[[:space:]]*$//')"
+    | sed 's/[[:space:]]*$//' || true)"
   [[ -z "$palette_name" ]] && palette_name="$stem"
 
   # Build ImageMagick args by parsing colour entries
@@ -106,6 +105,8 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
   palette_names+=("$palette_name")
   palette_files+=("$filename")
 done
+
+shopt -u nullglob
 
 # -----------------------------------------------------------------------------
 # Rebuild the ## Preview Palettes section in the README
