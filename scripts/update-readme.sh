@@ -43,6 +43,9 @@
 # Strict mode
 set -euo pipefail
 
+# Ensure assets reflect only current palettes by tracking generated assets
+# and removing any that no longer have a corresponding palette file
+
 # Ensure we run from project root
 cd "$(dirname "$0")/.." || exit 1
 
@@ -53,9 +56,8 @@ TILE_SIZE="${1:-50}"
 
 mkdir -p "$OUTPUT_DIR"
 
-# Clear old preview files
-shopt -s nullglob
-rm -f "${OUTPUT_DIR:?}"/*.jpg
+# Track which asset files we generate so we can remove stale ones
+declare -A asset_map
 
 palette_names=()
 palette_files=()
@@ -68,10 +70,11 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
   stem="${filename%.gpl}"
   output="${OUTPUT_DIR}/${stem}.jpg"
 
-  # Try getting Name: field from the palette header, fall back to the filename
-  palette_name="$(grep -m1 '^Name:' "$palette" \
-    | sed 's/^Name:[[:space:]]*//' \
-    | sed 's/[[:space:]]*$//' || true)"
+  # Try getting Name: field from the palette header, fall back to the filename stem
+  palette_name=""
+  if name_line=$(grep -m1 '^Name:' "$palette" 2>/dev/null); then
+    palette_name=$(echo "$name_line" | sed 's/^Name:[[:space:]]*//' | sed 's/[[:space:]]*$//')
+  fi
   [[ -z "$palette_name" ]] && palette_name="$stem"
 
   # Build ImageMagick args by parsing colour entries
@@ -104,9 +107,19 @@ for palette in "${PALETTES_DIR}"/*.gpl; do
 
   palette_names+=("$palette_name")
   palette_files+=("$filename")
+  # Track generated asset stem
+  asset_map["$stem"]=1
 done
 
-shopt -u nullglob
+# Remove stale assets that no longer have a corresponding palette file
+for old_asset in "${OUTPUT_DIR}"/*.jpg; do
+  [[ -e "$old_asset" ]] || continue
+  old_stem="$(basename "$old_asset" .jpg)"
+  if [[ -z "${asset_map[$old_stem]:-}" ]]; then
+    echo "Removing stale asset: ${old_asset}"
+    rm -f "$old_asset"
+  fi
+done
 
 # -----------------------------------------------------------------------------
 # Rebuild the ## Preview Palettes section in the README
