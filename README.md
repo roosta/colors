@@ -1,6 +1,6 @@
 # Color collection
 
-A collection of predefined color palettes, and web resources to aid in developing more palettes.
+My collection of predefined color palettes, and web resources to aid in developing more palettes.
 
 The [palettes](./palettes) directory contain a collection of GIMP palette files (.gpl), and
 can be read by programs like [Gimp](https://www.gimp.org/),
@@ -24,6 +24,7 @@ can be read by programs like [Gimp](https://www.gimp.org/),
 - [Colorizer - Color picker and converter (RGB HSL HSB/HSV CMYK HEX LAB)](http://colorizer.org/)
 - [CSS Duotone Generator](https://cssduotone.com/)
 - [Colordot - A color picker for humans](https://color.hailpixel.com/)
+- [OKLCH Color Picker](https://oklch.com/#0.7,0.1,21,100)
 
 ## Predefined palettes
 
